@@ -112,3 +112,5 @@
    (update-in p [:char :age] + 2))
 
 (or (= 1 1) (= 1 2))
+(func 2)
+(println fst)
