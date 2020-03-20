@@ -16,9 +16,22 @@
 
 (defn triangular?
   [n]
-  (= n (last (take-while #(<= n) tri))))
+  (= n (last (take-while #(<= % n) tri))))
 
-(triangular? 1)
+(defn row-tri
+  [n]
+  (last (take n tri)))
+
+(row-tri 4)
+(triangular? 3)
+
+(defn row-num
+  [pos]
+  ((comp inc count) (take-while #(> pos %) tri)))
+
+(take-while #(> 5 %) tri)
+
+(row-num 11)
 
 (defn -main
   "I don't do a whole lot ... yet."
